@@ -1,0 +1,10 @@
+// networks: {
+  //   tenderly: {
+  //     url: 'https://virtual.polygon-amoy.rpc.tenderly.co/32f36a4a-d071-4f1b-9456-f9f09b1327e8',
+  //     accounts: ['0x65bff551a90eb9301cbd747fcff300862a38e700da5af572600d78ac5b21a19e']
+  //   },
+  //   amoy: {
+  //     url: 'https://polygon-amoy.g.alchemy.com/v2/3wH64YgPQ4lMUQ4UnAQeXc9jOA8aBrkf',
+  //     accounts: ['0x65bff551a90eb9301cbd747fcff300862a38e700da5af572600d78ac5b21a19e']
+  //   },
+  // },
