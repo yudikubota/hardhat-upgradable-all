@@ -18,12 +18,12 @@ async function deployUUPSProxy(
 
     console.log("UUPS upgradable proxy deployed to:", await uupsProxy_V1.getAddress());
 
-    console.log('Upgrading UUPS upgradable proxy V1 to V2...');
-    const uupsProxy_V2 = await hre.upgrades.upgradeProxy(uupsProxy_V1, factory_V2, {
-        kind: 'uups',
-    });
+    // console.log('Upgrading UUPS upgradable proxy V1 to V2...');
+    // const uupsProxy_V2 = await hre.upgrades.upgradeProxy(uupsProxy_V1, factory_V2, {
+    //     kind: 'uups',
+    // });
 
-    await uupsProxy_V2.waitForDeployment()
+    // await uupsProxy_V2.waitForDeployment()
 
     // TODO: get implementation addresses
 
@@ -48,12 +48,12 @@ async function deployTransparentProxy(
 
     console.log("Transparent upgradable proxy V1 deployed to:", await transparentProxy_V1.getAddress());
 
-    console.log('Upgrading Transparent proxy V1 to V2...');
-    const transparentProxy_V2 = await hre.upgrades.upgradeProxy(transparentProxy_V1, factory_V2, {
-        kind: 'transparent',
-    });
+    // console.log('Upgrading Transparent proxy V1 to V2...');
+    // const transparentProxy_V2 = await hre.upgrades.upgradeProxy(transparentProxy_V1, factory_V2, {
+    //     kind: 'transparent',
+    // });
 
-    await transparentProxy_V2.waitForDeployment()
+    // await transparentProxy_V2.waitForDeployment()
 
     console.log('=== Transparent Proxy Deployment Completed ===\n');
 }
@@ -110,10 +110,10 @@ async function deployBeaconProxy(
     await beaconProxy_V1.waitForDeployment();
     console.log("Beacon Proxy V1 deployed to:", await beaconProxy_V1.getAddress());
 
-    console.log('Upgrading Beacon to V2...');
-    const beaconProxy_V2 = await hre.upgrades.upgradeBeacon(beacon, factory_V2);
-    await beaconProxy_V2.waitForDeployment();
-    console.log("Beacon proxy V2 deployed to:", await beaconProxy_V2.getAddress());
+    // console.log('Upgrading Beacon to V2...');
+    // const beaconProxy_V2 = await hre.upgrades.upgradeBeacon(beacon, factory_V2);
+    // await beaconProxy_V2.waitForDeployment();
+    // console.log("Beacon proxy V2 deployed to:", await beaconProxy_V2.getAddress());
 
     console.log('=== Beacon Proxy Deployment Completed ===\n');
 }
